@@ -2,8 +2,9 @@
 import PortfolioNavbar from '@/components/PortfolioNavbar';
 import Footer from '@/components/Footer';
 import { useRevealAnimation } from '@/lib/animations';
-import { Cloud, BarChart3, Database, ChartPie, LineChart, CloudLightning } from 'lucide-react';
+import { Cloud, BarChart3, Database, ChartPie, LineChart, CloudLightning, Github, Shield, Zap } from 'lucide-react';
 import { Card } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 
 export default function Projects() {
   const { ref, isVisible } = useRevealAnimation();
@@ -26,6 +27,7 @@ export default function Projects() {
                 description="Développement d'une solution de prédiction météorologique utilisant des algorithmes d'IA pour fournir des prévisions précises sur web et mobile."
                 icon={CloudLightning}
                 tags={["Intelligence Artificielle", "Développement Web", "Mobile"]}
+                githubLink="https://github.com/Lucas-Matusiak/meteo-campus/tree/main"
               />
               
               <ProjectCard
@@ -43,8 +45,9 @@ export default function Projects() {
               />
               
               <ProjectCard
-                title="Solution BI pour le suivi d'actions stratégiques"
-                description="Développement d'une solution BI pour améliorer le suivi des actions stratégiques et opérationnelles du pôle QSE."
+                title="Développement de solutions BI pour améliorer le suivi des actions stratégiques et opérationnelles du pôle QSE de SNCF Voyageurs"
+                subtitle="MAISON STRATÉGIQUE"
+                description="Développement d'une solution BI complète pour le suivi des actions stratégiques et opérationnelles, facilitant la prise de décision et l'amélioration continue."
                 icon={ChartPie}
                 tags={["Business Intelligence", "Dashboarding", "Analyse stratégique"]}
               />
@@ -63,6 +66,32 @@ export default function Projects() {
                 tags={["Power BI", "Écomobilité", "Analyse d'impact"]}
               />
             </div>
+            
+            <h2 className="text-2xl md:text-3xl font-bold mt-20 mb-8 text-center">Autres projets développés chez SNCF Voyageurs</h2>
+            <div className={`grid md:grid-cols-2 gap-8 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+              <ProjectCard
+                title="Application de gestion des précurseurs d'accidents"
+                description="Participation au développement d'une application Power Apps pour la gestion des précurseurs d'accidents et la prévention des risques, permettant d'identifier et de traiter les situations à risque avant qu'elles ne deviennent des accidents."
+                icon={Shield}
+                tags={["Power Apps", "Prévention des risques", "Sécurité"]}
+              />
+              
+              <ProjectCard
+                title="Refonte des tableaux de bord pour la revue de sécurité"
+                subtitle="REVUE SÉCURITÉ"
+                description="Refonte et optimisation des tableaux de bord pour améliorer le suivi et l'analyse des indicateurs de sécurité, facilitant l'identification des risques et la mise en place d'actions préventives."
+                icon={Shield}
+                tags={["Power BI", "Sécurité", "Reporting"]}
+              />
+              
+              <ProjectCard
+                title="Optimisation du suivi des formations électriques"
+                subtitle="ELEC ACADÉMIE"
+                description="Développement d'un système de suivi des formations électriques permettant de gérer efficacement les qualifications et habilitations des collaborateurs, assurant la conformité aux exigences réglementaires."
+                icon={Zap}
+                tags={["Power BI", "Formation", "Habilitations"]}
+              />
+            </div>
           </div>
         </section>
       </main>
@@ -74,14 +103,18 @@ export default function Projects() {
 
 function ProjectCard({ 
   title, 
+  subtitle,
   description, 
   icon: Icon,
-  tags = []
+  tags = [],
+  githubLink
 }: { 
   title: string; 
+  subtitle?: string;
   description: string; 
   icon: any;
   tags?: string[];
+  githubLink?: string;
 }) {
   return (
     <Card className="glass overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
@@ -90,7 +123,24 @@ function ProjectCard({
           <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
             <Icon className="h-6 w-6 text-primary" />
           </div>
-          <h3 className="text-xl font-bold">{title}</h3>
+          <div className="flex-1">
+            <h3 className="text-xl font-bold">{title}</h3>
+            {subtitle && (
+              <p className="text-sm font-medium text-primary">{subtitle}</p>
+            )}
+          </div>
+          {githubLink && (
+            <a
+              href={githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-transform hover:scale-110"
+            >
+              <Button variant="outline" size="icon" aria-label="GitHub repository">
+                <Github className="h-4 w-4" />
+              </Button>
+            </a>
+          )}
         </div>
         
         <p className="text-muted-foreground mb-4">{description}</p>
