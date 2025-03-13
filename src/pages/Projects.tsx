@@ -2,7 +2,17 @@
 import PortfolioNavbar from '@/components/PortfolioNavbar';
 import Footer from '@/components/Footer';
 import { useRevealAnimation } from '@/lib/animations';
-import { Cloud, BarChart3, Database, ChartPie, LineChart, CloudLightning, Github, Shield, Zap } from 'lucide-react';
+import { 
+  Cloud, 
+  BarChart3, 
+  Database, 
+  ChartPie, 
+  LineChart, 
+  CloudLightning, 
+  Github, 
+  Shield, 
+  Zap 
+} from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -26,7 +36,7 @@ export default function Projects() {
                 title="Météo Campus - Application web et mobile de prédiction météorologique (IA)"
                 description="Développement d'une solution complète de prédiction météorologique pour campus universitaires offrant des prévisions localisées et alertes en temps réel. Utilisation d'algorithmes d'IA pour fournir des prévisions précises sur web et mobile."
                 icon={CloudLightning}
-                tags={["Intelligence Artificielle", "Développement Web", "Mobile", "API", "Données en temps réel"]}
+                tags={["Intelligence Artificielle", "Développement Web", "Mobile", "API", "Données en temps réel", "Power BI", "DAX", "Langage M", "Modélisation de données"]}
                 githubLink="https://github.com/Lucas-Matusiak/meteo-campus/tree/main"
               />
               
@@ -110,7 +120,7 @@ function ProjectCard({
   githubLink?: string;
 }) {
   return (
-    <Card className="glass overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+    <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-card border border-border">
       <div className="p-6">
         <div className="flex items-center gap-4 mb-4">
           <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
