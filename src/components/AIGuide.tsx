@@ -4,14 +4,73 @@ import { Button } from '@/components/ui/button';
 import { useTypewriter } from '@/lib/animations';
 import { Bot, Send, X, Minimize, Maximize } from 'lucide-react';
 
-const INITIAL_MESSAGE = "Bonjour ! Je suis votre guide IA. Comment puis-je vous aider à naviguer dans ce portfolio ?";
+const INITIAL_MESSAGE = "Bonjour ! Je suis votre guide personnel pour ce portfolio. En quoi puis-je vous éclairer aujourd'hui ?";
 
+// Réponses améliorées pour simuler une conversation plus naturelle et savante
 const RESPONSES = {
-  projects: "Je peux vous montrer les projets de développement web et design. Descendez à la section Projets pour découvrir des travaux variés combinant interfaces élégantes et fonctionnalités techniques avancées.",
-  skills: "Les compétences principales incluent: React, TypeScript, Node.js, UI/UX Design, et intégration d'IA. Chaque projet démontre ces compétences dans des contextes pratiques.",
-  contact: "Vous pouvez me contacter via le formulaire en bas de page ou directement par email. Je suis disponible pour discuter de projets freelance ou d'opportunités professionnelles.",
-  experience: "Mon parcours inclut 5 ans d'expérience en développement web, spécialisé dans les interfaces modernes et l'intégration d'IA pour créer des expériences utilisateur innovantes.",
-  default: "N'hésitez pas à explorer le portfolio. Vous pouvez me poser des questions sur les projets, compétences, ou expérience professionnelle à tout moment."
+  projects: "Ah, les projets ! Ils reflètent l'évolution d'un parcours créatif et technique. Vous trouverez dans la section Projets une collection d'œuvres où l'esthétique visuelle s'allie à l'ingéniosité technique. Chaque création raconte une histoire d'innovation et de résolution de problèmes.",
+  
+  skills: "Les compétences sont le fruit d'un apprentissage continu. Le portfolio présente une maîtrise approfondie de React et TypeScript pour l'architecture frontend, Node.js pour les solutions backend, et une expertise en conception UX/UI pour créer des expériences mémorables. L'intégration d'intelligence artificielle vient compléter cet écosystème de compétences pour des solutions véritablement avant-gardistes.",
+  
+  contact: "La communication est le pont entre les idées et leur réalisation. Vous pouvez initier une conversation professionnelle via le formulaire de contact en bas de page ou directement par courriel. Chaque échange est une opportunité de collaboration potentielle, que ce soit pour un projet spécifique ou une relation professionnelle à plus long terme.",
+  
+  experience: "L'expérience est un voyage fascinant ! Avec cinq années dédiées au développement web, ce parcours est marqué par une spécialisation dans la création d'interfaces modernes et l'intégration de solutions d'intelligence artificielle. Chaque étape professionnelle a été une pierre à l'édifice d'une expertise toujours en évolution.",
+  
+  education: "La formation académique et l'apprentissage autodidacte se complètent harmonieusement dans ce parcours. Une solide base théorique en informatique se marie à une curiosité insatiable pour les nouvelles technologies, créant ainsi un profil polyvalent capable de s'adapter aux évolutions constantes du domaine.",
+  
+  philosophy: "La philosophie qui guide ce travail repose sur trois piliers : l'élégance dans la simplicité, l'accessibilité pour tous, et l'innovation responsable. Chaque ligne de code écrite vise à servir l'utilisateur final tout en respectant les meilleures pratiques de l'industrie.",
+  
+  default: "Votre curiosité est le moteur de toute découverte ! N'hésitez pas à explorer plus en détail les différentes facettes de ce portfolio. Je suis à votre disposition pour approfondir n'importe quel aspect qui susciterait votre intérêt - projets, compétences techniques, expériences professionnelles ou vision créative."
+};
+
+// Fonction pour analyser le contexte de la conversation
+const analyzeContext = (message, previousMessages) => {
+  const userInput = message.toLowerCase();
+  const conversationHistory = previousMessages
+    .filter(msg => msg.isUser)
+    .map(msg => msg.text.toLowerCase())
+    .join(' ');
+  
+  // Analyse contextuelle
+  if (userInput.includes('merci') || userInput.includes('intéressant')) {
+    return "Je vous en prie. C'est un plaisir d'échanger avec vous sur ces sujets passionnants. Y a-t-il autre chose que vous aimeriez explorer ?";
+  }
+  
+  if (userInput.includes('pourquoi') && 
+     (userInput.includes('important') || userInput.includes('portfolio'))) {
+    return "Excellente question ! Un portfolio est bien plus qu'une vitrine de projets — c'est le reflet d'une pensée créative et d'une approche méthodologique. Il permet de communiquer non seulement ce que l'on fait, mais surtout comment on le fait et pourquoi. C'est un dialogue silencieux avec les visiteurs avant même qu'une conversation réelle ne s'établisse.";
+  }
+  
+  if ((userInput.includes('conseil') || userInput.includes('recommandation')) && 
+      (userInput.includes('développeur') || userInput.includes('carrière'))) {
+    return "En matière de développement professionnel, je recommanderais trois axes : la maîtrise approfondie de vos outils principaux, l'ouverture constante aux technologies émergentes, et la participation active à la communauté. L'équilibre entre spécialisation et polyvalence est souvent la clé d'une carrière épanouissante dans notre domaine en perpétuelle évolution.";
+  }
+  
+  if (userInput.includes('ia') || userInput.includes('intelligence artificielle')) {
+    return "L'intelligence artificielle transforme profondément notre façon de concevoir et développer des applications. Dans ce portfolio, vous remarquerez son intégration subtile pour améliorer l'expérience utilisateur, comme notre conversation actuelle. L'IA n'est pas une fin en soi, mais un outil puissant pour résoudre des problèmes complexes et créer des expériences plus intuitives et personnalisées.";
+  }
+  
+  // Analyse des motifs de conversation
+  if (conversationHistory.includes('projet') && userInput.includes('préféré')) {
+    return "Parmi les projets présentés, le Dashboard analytique représente un défi particulièrement stimulant. La complexité de visualiser des données multidimensionnelles tout en maintenant une interface intuitive a nécessité une approche novatrice. Ce projet illustre particulièrement bien la fusion entre rigueur technique et sensibilité utilisateur.";
+  }
+  
+  // Réponses standard basées sur les mots-clés
+  if (userInput.includes('projet')) {
+    return RESPONSES.projects;
+  } else if (userInput.includes('compétence') || userInput.includes('skill')) {
+    return RESPONSES.skills;
+  } else if (userInput.includes('contact')) {
+    return RESPONSES.contact;
+  } else if (userInput.includes('expérience') || userInput.includes('parcours')) {
+    return RESPONSES.experience;
+  } else if (userInput.includes('formation') || userInput.includes('education')) {
+    return RESPONSES.education;
+  } else if (userInput.includes('philosophie') || userInput.includes('approche')) {
+    return RESPONSES.philosophy;
+  }
+  
+  return RESPONSES.default;
 };
 
 export default function AIGuide() {
@@ -49,26 +108,26 @@ export default function AIGuide() {
     setInputValue('');
     setIsTyping(true);
     
-    // Simulate AI thinking
+    // Simulate AI thinking with a variable delay based on message complexity
+    const thinkingTime = Math.min(1000 + inputValue.length * 10, 3000);
+    
     setTimeout(() => {
-      let response = '';
-      
-      const userInput = inputValue.toLowerCase();
-      if (userInput.includes('projet')) {
-        response = RESPONSES.projects;
-      } else if (userInput.includes('compétence') || userInput.includes('skill')) {
-        response = RESPONSES.skills;
-      } else if (userInput.includes('contact')) {
-        response = RESPONSES.contact;
-      } else if (userInput.includes('expérience') || userInput.includes('parcours')) {
-        response = RESPONSES.experience;
-      } else {
-        response = RESPONSES.default;
-      }
-      
+      const response = analyzeContext(inputValue, messages);
       setMessages(prev => [...prev, { text: response, isUser: false }]);
       setIsTyping(false);
-    }, 1000);
+    }, thinkingTime);
+  };
+  
+  // Fonction pour gérer les suggestions de questions
+  const handleSuggestionClick = (suggestion: string) => {
+    setMessages(prev => [...prev, { text: suggestion, isUser: true }]);
+    setIsTyping(true);
+    
+    setTimeout(() => {
+      const response = analyzeContext(suggestion, messages);
+      setMessages(prev => [...prev, { text: response, isUser: false }]);
+      setIsTyping(false);
+    }, 1500);
   };
   
   if (!isOpen) return null;
@@ -166,6 +225,27 @@ export default function AIGuide() {
               <div ref={messagesEndRef} />
             </div>
           </div>
+          
+          {/* Suggestions (visible uniquement si peu de messages) */}
+          {messages.length < 3 && (
+            <div className="bg-white/95 px-4 py-2 border-t border-secondary/20">
+              <p className="text-xs text-muted-foreground mb-2">Questions suggérées :</p>
+              <div className="flex flex-wrap gap-2">
+                <button 
+                  onClick={() => handleSuggestionClick("Parlez-moi des projets récents")}
+                  className="text-xs bg-secondary/30 hover:bg-secondary/50 text-primary rounded-full px-2 py-1 transition-colors"
+                >
+                  Projets récents ?
+                </button>
+                <button 
+                  onClick={() => handleSuggestionClick("Quelle est votre philosophie de développement ?")}
+                  className="text-xs bg-secondary/30 hover:bg-secondary/50 text-primary rounded-full px-2 py-1 transition-colors"
+                >
+                  Philosophie de développement ?
+                </button>
+              </div>
+            </div>
+          )}
           
           {/* Input area */}
           <form 
