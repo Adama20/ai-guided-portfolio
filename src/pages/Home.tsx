@@ -84,7 +84,7 @@ export default function Home() {
               <SummaryCard 
                 icon={Briefcase} 
                 title="Expérience" 
-                value="5+ ans"
+                value="4+ ans"
                 description="En informatique décisionnelle et data"
                 link="/experiences"
               />
