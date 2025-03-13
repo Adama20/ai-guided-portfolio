@@ -19,6 +19,11 @@ export default function PortfolioNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
+  // Log location changes to debug
+  useEffect(() => {
+    console.log("Current location:", location.pathname);
+  }, [location]);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
