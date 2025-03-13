@@ -23,47 +23,40 @@ export default function Projects() {
             
             <div ref={ref} className={`grid md:grid-cols-2 gap-8 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
               <ProjectCard
-                title="Application web et mobile de prédiction de la météo (IA)"
-                description="Développement d'une solution de prédiction météorologique utilisant des algorithmes d'IA pour fournir des prévisions précises sur web et mobile."
+                title="Météo Campus - Application web et mobile de prédiction météorologique (IA)"
+                description="Développement d'une solution complète de prédiction météorologique pour campus universitaires offrant des prévisions localisées et alertes en temps réel. Utilisation d'algorithmes d'IA pour fournir des prévisions précises sur web et mobile."
                 icon={CloudLightning}
-                tags={["Intelligence Artificielle", "Développement Web", "Mobile"]}
+                tags={["Intelligence Artificielle", "Développement Web", "Mobile", "API", "Données en temps réel"]}
                 githubLink="https://github.com/Lucas-Matusiak/meteo-campus/tree/main"
               />
               
               <ProjectCard
-                title="Météo Campus"
-                description="Plateforme météorologique dédiée aux campus universitaires, offrant des prévisions localisées et des alertes en temps réel."
-                icon={Cloud}
-                tags={["Météorologie", "Données en temps réel", "API"]}
-              />
-              
-              <ProjectCard
                 title="Optimisation des données SNCF Voyageurs"
-                description="Optimisation de la performance et de la gouvernance des données dans l'analyse des données de SNCF Voyageurs avec Azure, Power BI, SQL, Power Automate."
+                description="Optimisation de la performance et de la gouvernance des données dans l'analyse des données de SNCF Voyageurs. Implémentation de solutions de stockage et d'analyse optimisées pour les grands volumes de données ferroviaires."
                 icon={Database}
-                tags={["Azure", "Power BI", "SQL", "Power Automate"]}
+                tags={["Azure", "Power BI", "SQL", "DAX", "Modélisation de données", "Power Automate", "Langage M"]}
               />
               
               <ProjectCard
                 title="Développement de solutions BI pour améliorer le suivi des actions stratégiques et opérationnelles du pôle QSE de SNCF Voyageurs"
                 subtitle="MAISON STRATÉGIQUE"
-                description="Développement d'une solution BI complète pour le suivi des actions stratégiques et opérationnelles, facilitant la prise de décision et l'amélioration continue."
+                description="Développement d'une solution BI complète pour le suivi des actions stratégiques et opérationnelles, facilitant la prise de décision et l'amélioration continue. Création de tableaux de bord interactifs et rapports analytiques."
                 icon={ChartPie}
-                tags={["Business Intelligence", "Dashboarding", "Analyse stratégique"]}
+                tags={["Business Intelligence", "Power BI", "DAX", "Modélisation de données", "Langage M", "Dashboarding", "Analyse stratégique"]}
               />
               
               <ProjectCard
                 title="Rapport Power BI pour l'analyse environnementale"
-                description="Développement d'un rapport Power BI pour l'analyse environnementale et les initiatives d'écomobilité."
+                description="Développement d'un rapport Power BI pour l'analyse environnementale et les initiatives d'écomobilité, intégrant des données de multiples sources pour créer une vue unifiée des performances environnementales."
                 icon={BarChart3}
-                tags={["Power BI", "Analyse environnementale", "Reporting"]}
+                tags={["Power BI", "DAX", "Modélisation de données", "Langage M", "Analyse environnementale", "Reporting"]}
               />
               
               <ProjectCard
                 title="Analyse des initiatives d'écomobilité"
-                description="Développement d'un rapport Power BI pour l'analyse détaillée des initiatives d'écomobilité et leur impact."
+                description="Développement d'un rapport Power BI pour l'analyse détaillée des initiatives d'écomobilité et leur impact. Création de visualisations complexes pour identifier les tendances et opportunités d'optimisation."
                 icon={LineChart}
-                tags={["Power BI", "Écomobilité", "Analyse d'impact"]}
+                tags={["Power BI", "DAX", "Modélisation de données", "Langage M", "Écomobilité", "Analyse d'impact"]}
               />
             </div>
             
@@ -73,7 +66,7 @@ export default function Projects() {
                 title="Application de gestion des précurseurs d'accidents"
                 description="Participation au développement d'une application Power Apps pour la gestion des précurseurs d'accidents et la prévention des risques, permettant d'identifier et de traiter les situations à risque avant qu'elles ne deviennent des accidents."
                 icon={Shield}
-                tags={["Power Apps", "Prévention des risques", "Sécurité"]}
+                tags={["Power Apps", "Power BI", "DAX", "Modélisation de données", "Prévention des risques", "Sécurité"]}
               />
               
               <ProjectCard
@@ -81,7 +74,7 @@ export default function Projects() {
                 subtitle="REVUE SÉCURITÉ"
                 description="Refonte et optimisation des tableaux de bord pour améliorer le suivi et l'analyse des indicateurs de sécurité, facilitant l'identification des risques et la mise en place d'actions préventives."
                 icon={Shield}
-                tags={["Power BI", "Sécurité", "Reporting"]}
+                tags={["Power BI", "DAX", "Modélisation de données", "Langage M", "Sécurité", "Reporting"]}
               />
               
               <ProjectCard
@@ -89,7 +82,7 @@ export default function Projects() {
                 subtitle="ELEC ACADÉMIE"
                 description="Développement d'un système de suivi des formations électriques permettant de gérer efficacement les qualifications et habilitations des collaborateurs, assurant la conformité aux exigences réglementaires."
                 icon={Zap}
-                tags={["Power BI", "Formation", "Habilitations"]}
+                tags={["Power BI", "DAX", "Modélisation de données", "Langage M", "Formation", "Habilitations"]}
               />
             </div>
           </div>
