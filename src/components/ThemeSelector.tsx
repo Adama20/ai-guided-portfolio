@@ -8,6 +8,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem
 } from '@/components/ui/dropdown-menu';
+import { useEffect } from 'react';
 
 const themes = [
   { name: 'Bleu', value: 'blue', color: '#3b82f6' },
@@ -18,6 +19,16 @@ const themes = [
 
 export default function ThemeSelector() {
   const { theme, setTheme, mode, toggleMode } = useTheme();
+  
+  // Force update document theme attribute when component mounts
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    if (mode === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [theme, mode]);
 
   return (
     <div className="flex items-center gap-2">

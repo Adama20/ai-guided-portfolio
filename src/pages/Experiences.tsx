@@ -2,8 +2,9 @@
 import PortfolioNavbar from '@/components/PortfolioNavbar';
 import Footer from '@/components/Footer';
 import { useRevealAnimation } from '@/lib/animations';
-import { Briefcase, Calendar, Building, MapPin } from 'lucide-react';
+import { Briefcase, Calendar, Building, MapPin, ExternalLink } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 
 const experiences = [
   {
@@ -13,12 +14,49 @@ const experiences = [
     type: "Alternance",
     location: "Bordeaux",
     realizations: [
-      "Analyse des besoins et conception de solutions BI",
-      "Collecte, transformation et fiabilisation des données",
-      "Développement et optimisation des tableaux de bord Power BI",
-      "Optimisation des performances et automatisation des processus",
-      "Participation à des projets transverses (Power Apps)",
-      "Déploiement, formation et accompagnement des utilisateurs"
+      {
+        title: "Analyse des besoins et conception de solutions BI",
+        details: [
+          "Analyser, structurer et formaliser les besoins métiers en collaboration avec les responsables du pôle QSE pour concevoir des solutions adaptées."
+        ]
+      },
+      {
+        title: "Collecte, transformation et fiabilisation des données",
+        details: [
+          "Collecter, traiter et transformer les données issues de diverses sources (SharePoint, Entrepôt de données, Application, SQL Server) afin de garantir leur qualité et leur cohérence.",
+          "Centraliser et fiabiliser les données en améliorant la gouvernance et l'accessibilité des informations critiques."
+        ]
+      },
+      {
+        title: "Projets : Développement et optimisation des outils analytiques",
+        details: [
+          "Développer et perfectionner des tableaux de bord dans Power BI pour analyser la performance, la sécurité et l'impact environnemental à travers des KPIs et des modèles analytiques avancés.",
+          "Refonte et optimisation des tableaux de bord pour la revue de sécurité, les formations électriques.",
+          "Développeur des tableaux de bordeaux pour l'analyse environnementale et les initiatives d'écomobilité.",
+          "Développement de solutions BI pour améliorer le suivi des actions stratégiques et opérationnelles du pôle QSE."
+        ]
+      },
+      {
+        title: "Optimisation des performances et automatisation",
+        details: [
+          "Migrer, intégrer et optimiser les données dans Power BI en appliquant des bonnes pratiques de modélisation (modèle en étoile, flocon, relationnel, DAX).",
+          "Automatiser et fiabiliser les processus de reporting grâce à Power Automate et Power Query pour améliorer l'efficacité et réduire les erreurs humaines."
+        ]
+      },
+      {
+        title: "Participation à des projets transverses",
+        details: [
+          "Participation au développement d'une application Power Apps pour la gestion des précurseurs d'accidents et la prévention des risques.",
+          "Mise en place d'indicateurs de performance et de suivi pour optimiser la gestion de la sécurité, de l'environnement et des formations internes."
+        ]
+      },
+      {
+        title: "Déploiement, formation et accompagnement des utilisateurs",
+        details: [
+          "Tester, déployer et maintenir les outils analytiques afin d'assurer leur bon fonctionnement et leur évolution en fonction des besoins.",
+          "Former et assister les collaborateurs à l'utilisation des outils métiers pour améliorer leur autonomie et optimiser l'exploitation des données."
+        ]
+      }
     ],
     tools: ["Power BI", "Azure", "Python", "SQL", "M", "DAX", "SharePoint", "Power Automate", "PL/SQL", "SQL Server", "Power Query", "Trello", "Excel"]
   },
@@ -28,11 +66,18 @@ const experiences = [
     period: "Avril 2022 - Juin 2022",
     type: "Stage",
     location: "Toulouse",
+    website: "https://seos-france.org/",
     realizations: [
-      "Développement et optimisation du site web de l'organisation",
-      "Intégration d'un chatbot conversationnel",
-      "Administration des serveurs et bases de données",
-      "Implémentation d'interfaces modernes et réactives"
+      {
+        title: "Développement et Optimisation du Site Web de l'Organisation",
+        details: [
+          "Participer au développement de sites web.",
+          "Intégrer et personnaliser le chatbot conversationnel pour offrir une assistance immédiate aux utilisateurs.",
+          "Administrer et gérer les serveurs et les bases de données.",
+          "Implémenter des interfaces modernes et réactives, optimisées pour une expérience fluide.",
+          "Collaborer avec l'équipe interne pour gérer le projet, définir les priorités, et respecter les délais."
+        ]
+      }
     ],
     tools: ["JavaScript", "Visual Studio", "MySQL", "IONOS", "Bootstrap", "FileZilla", "HTML5", "CSS3"]
   },
@@ -43,12 +88,42 @@ const experiences = [
     type: "CDD",
     location: "Dakar",
     realizations: [
-      "Installation et configuration des systèmes",
-      "Déploiement des postes de travail sous Linux et Windows",
-      "Gestion des bases de données et serveurs",
-      "Gestion de l'activité de support via ServiceNow",
-      "Assistance et formation des utilisateurs",
-      "Rédaction de documents techniques et fonctionnels"
+      {
+        title: "Installation et configuration des systèmes",
+        details: [
+          "Installer et configurer des matériels, logiciels et systèmes pour garantir leur bon fonctionnement au sein de l'entreprise."
+        ]
+      },
+      {
+        title: "Déploiement des postes de travail",
+        details: [
+          "Déployer les postes de travail sous Linux et Windows, intégrer les outils de gestion des données pour assurer la productivité des utilisateurs."
+        ]
+      },
+      {
+        title: "Gestion des bases de données et serveurs",
+        details: [
+          "Administrer les bases de données et les serveurs applicatifs, en veillant à leur performance et à leur sécurité."
+        ]
+      },
+      {
+        title: "Gestion de l'activité de support",
+        details: [
+          "Piloter l'activité de support technique à travers l'outil de ticketing ServiceNow en assurant un suivi efficace des demandes des utilisateurs."
+        ]
+      },
+      {
+        title: "Assistance et formation des utilisateurs",
+        details: [
+          "Assister et ancien des utilisateurs (technique, fonctionnel)"
+        ]
+      },
+      {
+        title: "Rédaction de documents",
+        details: [
+          "Rédiger les documents techniques et fonctionnels pour faciliter la gestion et la compréhension des systèmes en place."
+        ]
+      }
     ],
     tools: ["Linux", "Windows", "ServiceNow", "SGBD"]
   }
@@ -135,23 +210,50 @@ function ExperienceCard({
             <p className="text-primary font-medium">{experience.company}</p>
           </div>
           
+          {/* Website Link for SEOS-FRANCE */}
+          {experience.website && (
+            <div className="mt-1">
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="flex items-center gap-1.5"
+                onClick={() => window.open(experience.website, '_blank')}
+              >
+                <ExternalLink className="h-4 w-4" />
+                Voir le site développé
+              </Button>
+            </div>
+          )}
+          
           {/* Realizations */}
           <div>
-            <h4 className="text-sm font-semibold uppercase text-muted-foreground mb-2">
+            <h4 className="text-sm font-semibold uppercase text-muted-foreground mb-4">
               RÉALISATIONS
             </h4>
-            <ul className="space-y-2">
-              {experience.realizations.map((item: string, i: number) => (
-                <li key={i} className="flex items-start">
-                  <div className="mt-0.5 mr-2 flex-shrink-0">
-                    <div className="h-5 w-5 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs">
-                      {i + 1}
+            <div className="space-y-6">
+              {experience.realizations.map((item: any, i: number) => (
+                <div key={i} className="space-y-2">
+                  <div className="flex items-start gap-2">
+                    <div className="mt-0.5 flex-shrink-0">
+                      <div className="h-5 w-5 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs">
+                        {i + 1}
+                      </div>
                     </div>
+                    <h5 className="font-medium">{item.title}</h5>
                   </div>
-                  <span>{item}</span>
-                </li>
+                  
+                  {item.details && (
+                    <ul className="ml-7 space-y-1.5">
+                      {item.details.map((detail: string, j: number) => (
+                        <li key={j} className="text-muted-foreground">
+                          • {detail}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
           
           {/* Tools & Technologies */}

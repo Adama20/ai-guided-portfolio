@@ -11,7 +11,7 @@ const navItems = [
   { text: 'À propos', href: '/about' },
   { text: 'Expériences', href: '/experiences' },
   { text: 'Compétences', href: '/skills' },
-  { text: 'Formation', href: '/education' },
+  { text: 'Formations', href: '/education' },
   { text: 'Projets', href: '/projects' },
   { text: 'Contact', href: '/contact' },
 ];

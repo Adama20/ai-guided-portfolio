@@ -72,7 +72,7 @@ export default function Education() {
         {/* Education Section */}
         <section className="py-16 md:py-20">
           <div className="container mx-auto px-4">
-            <h1 className="text-3xl md:text-4xl font-bold mb-4 text-center">Formation</h1>
+            <h1 className="text-3xl md:text-4xl font-bold mb-4 text-center">Formations</h1>
             <p className="text-muted-foreground text-lg max-w-3xl mx-auto text-center mb-16">
               Mon parcours académique dans les domaines de l'informatique, de la data et de l'informatique décisionnelle.
             </p>

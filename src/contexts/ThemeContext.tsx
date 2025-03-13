@@ -43,6 +43,19 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
     }
   }, [mode]);
 
+  // Apply theme and mode on initial load
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    if (mode === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    
+    // Diagnose theme application
+    console.log('ThemeContext: Applied theme', theme, 'and mode', mode);
+  }, []);
+
   return (
     <ThemeContext.Provider value={{ theme, setTheme, mode, setMode, toggleMode }}>
       {children}
