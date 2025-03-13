@@ -100,20 +100,18 @@ export default function Projects() {
             
             <h2 className="text-2xl md:text-3xl font-bold mt-20 mb-8 text-center">Autres Projets Académiques</h2>
             <div className={`grid md:grid-cols-2 gap-8 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-              <AcademicProjectCard
+              <ProjectCard
                 title="Algorithme d'Identification Minimale en BDD"
                 description="Implémentation d'un algorithme permettant d'identifier tous les identifiants minimaux des tables d'une base de données. Ce projet a permis d'optimiser l'intégrité et la performance des bases de données en identifiant les clés candidates les plus efficaces pour chaque relation."
-                imageSrc="/placeholder.svg"
-                tags={["SQL", "Python", "Algorithmes", "Base de données", "Optimisation"]}
                 icon={Code}
+                tags={["SQL", "Python", "Algorithmes", "Base de données", "Optimisation"]}
               />
               
-              <AcademicProjectCard
+              <ProjectCard
                 title="Solution BI pour l'Analyse Financière de Total Energie"
                 description="Conception et mise en œuvre d'une solution Business Intelligence complète pour l'analyse financière de Total Energie. Ce projet a permis de centraliser les données financières, de créer des tableaux de bord interactifs et d'automatiser la génération de rapports d'analyse pour faciliter la prise de décision stratégique."
-                imageSrc="/placeholder.svg"
-                tags={["Power BI", "Azure Synapse", "DAX", "ETL", "Modélisation de données", "Finance"]}
                 icon={BarChart3}
+                tags={["Power BI", "Azure Synapse", "DAX", "ETL", "Modélisation de données", "Finance"]}
               />
             </div>
           </div>
@@ -167,60 +165,6 @@ function ProjectCard({
           )}
         </div>
         
-        <p className="text-muted-foreground mb-4">{description}</p>
-        
-        <div className="flex flex-wrap gap-2">
-          {tags.map((tag, index) => (
-            <span 
-              key={index} 
-              className="px-3 py-1 bg-secondary/50 rounded-full text-xs font-medium"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-      </div>
-    </Card>
-  );
-}
-
-function AcademicProjectCard({
-  title,
-  description,
-  imageSrc,
-  tags = [],
-  icon: Icon
-}: {
-  title: string;
-  description: string;
-  imageSrc: string;
-  tags?: string[];
-  icon: any;
-}) {
-  return (
-    <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-card border border-border">
-      <div className="aspect-video overflow-hidden bg-muted">
-        <div className="w-full h-full flex items-center justify-center bg-muted">
-          <div className="relative w-full h-full">
-            <img
-              src={imageSrc}
-              alt={title}
-              className="w-full h-full object-cover opacity-80"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="h-8 w-8 rounded-full bg-primary/80 flex items-center justify-center shrink-0">
-                    <Icon className="h-4 w-4 text-primary-foreground" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white">{title}</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="p-6">
         <p className="text-muted-foreground mb-4">{description}</p>
         
         <div className="flex flex-wrap gap-2">
