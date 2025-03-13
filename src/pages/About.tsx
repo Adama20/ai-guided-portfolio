@@ -24,7 +24,7 @@ export default function About() {
                 <div className="sticky top-24">
                   <div className="rounded-2xl overflow-hidden mb-6 shadow-md">
                     <img 
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                      src="/lovable-uploads/3c3e610e-c449-473c-915e-11599ca49a89.png" 
                       alt="Adama LO" 
                       className="w-full aspect-square object-cover"
                     />

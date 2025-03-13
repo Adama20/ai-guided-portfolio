@@ -66,7 +66,7 @@ export default function Home() {
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 animate-pulse"></div>
                   <div className="absolute inset-2 rounded-full overflow-hidden border-4 border-white shadow-lg">
                     <img 
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                      src="/lovable-uploads/3c3e610e-c449-473c-915e-11599ca49a89.png" 
                       alt="Adama LO" 
                       className="w-full h-full object-cover"
                     />

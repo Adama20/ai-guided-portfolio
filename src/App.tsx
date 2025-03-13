@@ -12,6 +12,7 @@ import Experiences from "./pages/Experiences";
 import Skills from "./pages/Skills";
 import Education from "./pages/Education";
 import Contact from "./pages/Contact";
+import Projects from "./pages/Projects";
 import NotFound from "./pages/NotFound";
 
 // Create a client
@@ -31,6 +32,7 @@ const App = () => (
               <Route path="/experiences" element={<Experiences />} />
               <Route path="/skills" element={<Skills />} />
               <Route path="/education" element={<Education />} />
+              <Route path="/projects" element={<Projects />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
