@@ -2,7 +2,7 @@
 import PortfolioNavbar from '@/components/PortfolioNavbar';
 import Footer from '@/components/Footer';
 import { useRevealAnimation } from '@/lib/animations';
-import { GraduationCap, Calendar, Award, School, BookOpen } from 'lucide-react';
+import { GraduationCap, Calendar, Award, School, BookOpen, MapPin } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 const educations = [
@@ -81,50 +81,46 @@ export default function Education() {
               ref={eduRef}
               className={`transition-all duration-700 ${eduVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
             >
-              <div className="max-w-4xl mx-auto">
-                <div className="relative pl-8 border-l-2 border-primary/20 space-y-12">
-                  {educations.map((edu, index) => (
-                    <div 
-                      key={index}
-                      className="relative"
-                      style={{ 
-                        opacity: eduVisible ? 1 : 0, 
-                        transform: eduVisible ? 'translateY(0)' : 'translateY(20px)',
-                        transition: 'all 0.7s ease-out',
-                        transitionDelay: `${index * 200}ms`
-                      }}
-                    >
-                      <div className="absolute -left-[25px] h-12 w-12 rounded-full bg-white shadow-md flex items-center justify-center border border-primary/10">
-                        <GraduationCap className="h-6 w-6 text-primary" />
+              <div className="max-w-4xl mx-auto space-y-8">
+                {educations.map((edu, index) => (
+                  <div 
+                    key={index}
+                    className="glass dark:bg-gray-800/50 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300"
+                    style={{ 
+                      opacity: eduVisible ? 1 : 0, 
+                      transform: eduVisible ? 'translateY(0)' : 'translateY(20px)',
+                      transition: 'all 0.7s ease-out',
+                      transitionDelay: `${index * 200}ms`
+                    }}
+                  >
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-3 mb-2">
+                        <Badge variant="secondary" className="px-3 py-1 flex items-center gap-1">
+                          <Calendar className="h-3 w-3" />
+                          {edu.period}
+                        </Badge>
+                        <Badge variant="outline" className="px-3 py-1 flex items-center gap-1">
+                          <MapPin className="h-3 w-3" />
+                          {edu.location}
+                        </Badge>
                       </div>
                       
-                      <div className="glass rounded-xl p-6 hover:shadow-md transition-all duration-300">
-                        <div className="flex items-center gap-3 mb-2">
-                          <Badge variant="secondary" className="px-3 py-1">
-                            <Calendar className="h-3 w-3 mr-1" />
-                            {edu.period}
-                          </Badge>
-                          <Badge variant="outline" className="px-3 py-1">
-                            {edu.location}
-                          </Badge>
-                        </div>
-                        
-                        <h3 className="text-xl font-bold mb-2">{edu.degree}</h3>
-                        <div className="flex items-center gap-2 text-primary">
-                          <School className="h-4 w-4" />
-                          <span>{edu.institution}</span>
-                        </div>
+                      <h3 className="text-xl font-bold">{edu.degree}</h3>
+                      
+                      <div className="flex items-center gap-2 text-primary">
+                        <School className="h-4 w-4" />
+                        <span>{edu.institution}</span>
                       </div>
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </section>
         
         {/* Certifications Section */}
-        <section id="certifications" className="py-16 md:py-20 bg-secondary/50">
+        <section id="certifications" className="py-16 md:py-20 bg-secondary/30 dark:bg-secondary/10">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold mb-16 text-center">Certifications</h2>
             
@@ -136,7 +132,7 @@ export default function Education() {
                 {certifications.map((cert, index) => (
                   <div 
                     key={index}
-                    className="glass rounded-xl p-6 hover:shadow-md transition-all duration-300 hover:-translate-y-1"
+                    className="glass dark:bg-gray-800/50 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                     style={{ 
                       transitionDelay: `${index * 100}ms`
                     }}

@@ -2,7 +2,7 @@
 import PortfolioNavbar from '@/components/PortfolioNavbar';
 import Footer from '@/components/Footer';
 import { useRevealAnimation } from '@/lib/animations';
-import { Briefcase, Calendar, Building } from 'lucide-react';
+import { Briefcase, Calendar, Building, MapPin } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 const experiences = [
@@ -73,17 +73,15 @@ export default function Experiences() {
               ref={ref}
               className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
             >
-              <div className="max-w-4xl mx-auto">
-                <div className="relative pl-8 border-l-2 border-primary/20 space-y-12">
-                  {experiences.map((exp, index) => (
-                    <ExperienceCard 
-                      key={index}
-                      experience={exp}
-                      index={index}
-                      isVisible={isVisible}
-                    />
-                  ))}
-                </div>
+              <div className="max-w-4xl mx-auto space-y-12">
+                {experiences.map((exp, index) => (
+                  <ExperienceCard 
+                    key={index}
+                    experience={exp}
+                    index={index}
+                    isVisible={isVisible}
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -114,54 +112,60 @@ function ExperienceCard({
         transitionDelay: `${index * 200}ms`
       }}
     >
-      <div className="absolute -left-[25px] h-12 w-12 rounded-full bg-white shadow-md flex items-center justify-center border border-primary/10">
-        <Briefcase className="h-6 w-6 text-primary" />
-      </div>
-      
-      <div className="glass rounded-xl p-6 hover:shadow-md transition-all duration-300">
-        <div className="flex flex-wrap items-center gap-3 mb-4">
-          <Badge variant="secondary" className="px-3 py-1">
-            <Calendar className="h-3 w-3 mr-1" />
-            {experience.period}
-          </Badge>
-          <Badge variant="outline" className="px-3 py-1">
-            {experience.type}
-          </Badge>
-          <Badge variant="outline" className="px-3 py-1">
-            <Building className="h-3 w-3 mr-1" />
-            {experience.location}
-          </Badge>
-        </div>
-        
-        <h3 className="text-xl font-bold mb-1">{experience.title}</h3>
-        <p className="text-primary font-medium mb-4">{experience.company}</p>
-        
-        <div className="mb-6">
-          <h4 className="text-sm font-semibold uppercase text-muted-foreground mb-2">
-            Réalisations
-          </h4>
-          <ul className="space-y-2">
-            {experience.realizations.map((item: string, i: number) => (
-              <li key={i} className="flex items-start">
-                <span className="h-5 w-5 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs mr-2 mt-0.5">
-                  {i + 1}
-                </span>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-        
-        <div>
-          <h4 className="text-sm font-semibold uppercase text-muted-foreground mb-2">
-            Outils & Technologies
-          </h4>
-          <div className="flex flex-wrap gap-2">
-            {experience.tools.map((tool: string, i: number) => (
-              <Badge key={i} variant="secondary" className="bg-secondary/70">
-                {tool}
-              </Badge>
-            ))}
+      <div className="glass dark:bg-gray-800/50 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300">
+        <div className="flex flex-col space-y-4">
+          {/* Header with badges */}
+          <div className="flex flex-wrap items-center gap-3 mb-2">
+            <Badge variant="secondary" className="px-3 py-1 flex items-center gap-1">
+              <Calendar className="h-3 w-3" />
+              {experience.period}
+            </Badge>
+            <Badge variant="outline" className="px-3 py-1">
+              {experience.type}
+            </Badge>
+            <Badge variant="outline" className="px-3 py-1 flex items-center gap-1">
+              <MapPin className="h-3 w-3" />
+              {experience.location}
+            </Badge>
+          </div>
+          
+          {/* Job title and company */}
+          <div>
+            <h3 className="text-xl font-bold">{experience.title}</h3>
+            <p className="text-primary font-medium">{experience.company}</p>
+          </div>
+          
+          {/* Realizations */}
+          <div>
+            <h4 className="text-sm font-semibold uppercase text-muted-foreground mb-2">
+              RÉALISATIONS
+            </h4>
+            <ul className="space-y-2">
+              {experience.realizations.map((item: string, i: number) => (
+                <li key={i} className="flex items-start">
+                  <div className="mt-0.5 mr-2 flex-shrink-0">
+                    <div className="h-5 w-5 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xs">
+                      {i + 1}
+                    </div>
+                  </div>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          
+          {/* Tools & Technologies */}
+          <div>
+            <h4 className="text-sm font-semibold uppercase text-muted-foreground mb-2">
+              OUTILS & TECHNOLOGIES
+            </h4>
+            <div className="flex flex-wrap gap-2">
+              {experience.tools.map((tool: string, i: number) => (
+                <Badge key={i} variant="secondary" className="bg-secondary/70">
+                  {tool}
+                </Badge>
+              ))}
+            </div>
           </div>
         </div>
       </div>
