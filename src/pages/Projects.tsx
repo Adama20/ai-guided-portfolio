@@ -40,6 +40,7 @@ export default function Projects() {
                 description="J'ai créé un système centralisé pour collecter et analyser les données des étudiants. Ce projet utilise Google Cloud pour stocker les informations de manière structurée et les connecte à des tableaux de bord interactifs, permettant aux responsables de suivre facilement les performances et le parcours des étudiants."
                 icon={Warehouse}
                 tags={["Google Cloud Platform", "BigQuery", "Power BI", "DirectQuery", "DAX", "Langage M", "SQL", "Python", "Modélisation en étoile", "Analyse de données"]}
+                githubLink="https://github.com/Adama20/suivi-etudiants-dwh"
               />
               
               <ProjectCard
