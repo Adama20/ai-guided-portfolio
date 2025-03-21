@@ -1,3 +1,4 @@
+
 import PortfolioNavbar from '@/components/PortfolioNavbar';
 import Footer from '@/components/Footer';
 import { useRevealAnimation } from '@/lib/animations';
@@ -35,7 +36,7 @@ export default function Projects() {
             <div ref={ref} className={`grid md:grid-cols-2 gap-8 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
               <ProjectCard
                 title="Météo Campus - Application web et mobile de prédiction météorologique (IA)"
-                description="Développement d'une solution complète de prédiction mét��orologique pour campus universitaires offrant des prévisions localisées et alertes en temps réel. Utilisation d'algorithmes d'IA pour fournir des prévisions précises sur web et mobile."
+                description="Développement d'une solution complète de prédiction météorologique pour campus universitaires offrant des prévisions localisées et alertes en temps réel. Utilisation d'algorithmes d'IA pour fournir des prévisions précises sur web et mobile."
                 icon={CloudLightning}
                 tags={["Intelligence Artificielle", "Développement Web", "Mobile", "API", "Données en temps réel", "Power BI", "DAX", "Langage M", "Modélisation de données"]}
                 githubLink="https://github.com/Lucas-Matusiak/meteo-campus/tree/main"
@@ -150,18 +151,6 @@ function ProjectCard({
               <p className="text-sm font-medium text-primary">{subtitle}</p>
             )}
           </div>
-          {githubLink && (
-            <a
-              href={githubLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-transform hover:scale-110"
-            >
-              <Button variant="outline" size="icon" aria-label="GitHub repository">
-                <Github className="h-4 w-4" />
-              </Button>
-            </a>
-          )}
         </div>
         
         <p className="text-muted-foreground mb-4">{description}</p>
