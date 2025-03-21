@@ -11,7 +11,9 @@ const educations = [
     degree: "Master (Bac+5) Informatique parcours MIAGE - Informatique Décisionnelle",
     institution: "Université de Bordeaux",
     period: "2022-2024",
-    location: "Bordeaux, France"
+    location: "Bordeaux, France",
+    programLink: "https://miage.emi.u-bordeaux.fr/",
+    careerLink: "https://www.miage.fr/master-miage-sciences-numeriques-management-2/#"
   },
   {
     degree: "Licence (Bac+3) Informatique parcours MIAGE - Informatique Décisionnelle",
@@ -114,17 +116,31 @@ export default function Education() {
                         <span>{edu.institution}</span>
                       </div>
                       
-                      {edu.programLink && (
-                        <div className="mt-2 pt-2">
-                          <Button 
-                            variant="outline" 
-                            size="sm"
-                            className="flex items-center gap-2"
-                            onClick={() => window.open(edu.programLink, '_blank')}
-                          >
-                            <ExternalLink className="h-3.5 w-3.5" />
-                            Voir le Programme
-                          </Button>
+                      {(edu.programLink || edu.careerLink) && (
+                        <div className="mt-2 pt-2 flex flex-wrap gap-2">
+                          {edu.programLink && (
+                            <Button 
+                              variant="outline" 
+                              size="sm"
+                              className="flex items-center gap-2"
+                              onClick={() => window.open(edu.programLink, '_blank')}
+                            >
+                              <ExternalLink className="h-3.5 w-3.5" />
+                              {edu.careerLink ? 'Voir la Formation' : 'Voir le Programme'}
+                            </Button>
+                          )}
+                          
+                          {edu.careerLink && (
+                            <Button 
+                              variant="outline" 
+                              size="sm"
+                              className="flex items-center gap-2"
+                              onClick={() => window.open(edu.careerLink, '_blank')}
+                            >
+                              <ExternalLink className="h-3.5 w-3.5" />
+                              Voir les Débouchés Métiers
+                            </Button>
+                          )}
                         </div>
                       )}
                     </div>
