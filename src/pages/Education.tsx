@@ -1,3 +1,4 @@
+
 import PortfolioNavbar from '@/components/PortfolioNavbar';
 import Footer from '@/components/Footer';
 import { useRevealAnimation } from '@/lib/animations';
@@ -127,7 +128,8 @@ export default function Education() {
                               onClick={() => window.open(edu.programLink, '_blank')}
                             >
                               <ExternalLink className="h-3.5 w-3.5" />
-                              {edu.careerLink ? 'Voir la Formation' : 'Voir le Programme'}
+                              {edu.degree.includes("Licence Professionnelle") ? 'Voir le Programme' : 
+                               edu.careerLink ? 'Voir la Formation' : 'Voir le Programme'}
                             </Button>
                           )}
                           
