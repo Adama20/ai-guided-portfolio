@@ -1,4 +1,3 @@
-
 import PortfolioNavbar from '@/components/PortfolioNavbar';
 import Footer from '@/components/Footer';
 import { useRevealAnimation } from '@/lib/animations';
@@ -37,7 +36,7 @@ export default function Projects() {
             <div ref={ref} className={`grid md:grid-cols-2 gap-8 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
               <ProjectCard
                 title="Mise en place d'un Data Warehouse BigQuery avec GCP pour le Suivi des Étudiants de l'école AmaissaTech"
-                description="Ce projet met en avant la méthode d'ingénierie et d'analyse de données en créant un entrepôt de données sur Google Cloud Platform avec une modélisation en étoile. Ensuite connecté cet entrepôt à Power BI en mode DirectQuery pour réaliser des analyses avancées avec DAX, M, SQL et Python."
+                description="J'ai créé un système centralisé pour collecter et analyser les données des étudiants de l'école AmaissaTech. Ce projet utilise Google Cloud pour stocker les informations de manière structurée et les connecte à des tableaux de bord interactifs, permettant aux responsables de suivre facilement les performances et le parcours des étudiants."
                 icon={Warehouse}
                 tags={["Google Cloud Platform", "BigQuery", "Power BI", "DirectQuery", "DAX", "Langage M", "SQL", "Python", "Modélisation en étoile", "Analyse de données"]}
               />
