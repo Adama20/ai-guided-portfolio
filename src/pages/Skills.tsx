@@ -60,6 +60,7 @@ const skillCategories = [
     skills: [
       { name: "Microsoft Azure", level: 75 },
       { name: "Microsoft Fabric", level: 70 },
+      { name: "Google Cloud Platform", level: 50 },
       { name: "SharePoint", level: 80 },
       { name: "Power Automate", level: 85 },
     ]
