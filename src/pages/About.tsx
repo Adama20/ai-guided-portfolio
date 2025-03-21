@@ -1,7 +1,7 @@
 
 import PortfolioNavbar from '@/components/PortfolioNavbar';
 import Footer from '@/components/Footer';
-import { Award, MapPin, Calendar, Mail, Linkedin, Phone, Languages, Heart } from 'lucide-react';
+import { Award, MapPin, Calendar, Mail, Linkedin, Phone, Languages, Heart, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { useRevealAnimation } from '@/lib/animations';
@@ -81,6 +81,13 @@ export default function About() {
                         <div>
                           <h3 className="font-medium">Disponibilité</h3>
                           <p className="text-muted-foreground">Immédiate</p>
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <Globe className="h-5 w-5 text-primary mt-0.5" />
+                        <div>
+                          <h3 className="font-medium">Mobilité</h3>
+                          <p className="text-muted-foreground">Partout en France</p>
                         </div>
                       </li>
                     </ul>
