@@ -38,7 +38,7 @@ export default function Projects() {
                 title="Météo Campus - Application web et mobile de prédiction météorologique (IA)"
                 description="Développement d'une solution complète de prédiction météorologique pour campus universitaires offrant des prévisions localisées et alertes en temps réel. Utilisation d'algorithmes d'IA pour fournir des prévisions précises sur web et mobile."
                 icon={CloudLightning}
-                tags={["Intelligence Artificielle", "Développement Web", "Mobile", "API", "Données en temps réel", "Power BI", "DAX", "Langage M", "Modélisation de données"]}
+                tags={["Intelligence Artificielle", "Développement Web", "Mobile", "API", "Données en temps réel", "Vue.js", "Tailwind", "Python", "SQL", "Visualisation de données", "Modélisation de données"]}
                 githubLink="https://github.com/Lucas-Matusiak/meteo-campus/tree/main"
               />
               
