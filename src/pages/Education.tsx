@@ -56,12 +56,12 @@ const certifications = [
   },
   {
     title: "Les fondements de Microsoft Fabric",
-    issuer: "Microsoft",
+    issuer: "LinkedIn Learning",
     date: "2024"
   },
   {
     title: "Les Fondements de Microsoft Azure",
-    issuer: "Microsoft",
+    issuer: "LinkedIn Learning",
     date: "2023"
   }
 ];
