@@ -2,8 +2,9 @@
 import PortfolioNavbar from '@/components/PortfolioNavbar';
 import Footer from '@/components/Footer';
 import { useRevealAnimation } from '@/lib/animations';
-import { GraduationCap, Calendar, Award, School, BookOpen, MapPin } from 'lucide-react';
+import { GraduationCap, Calendar, Award, School, BookOpen, MapPin, ExternalLink } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 
 const educations = [
   {
@@ -22,7 +23,8 @@ const educations = [
     degree: "Licence Professionnelle Informatique parcours Administrateur de Systèmes et de Bases de Données",
     institution: "Université de Perpignan",
     period: "2020-2021",
-    location: "Perpignan, France"
+    location: "Perpignan, France",
+    programLink: "https://drive.google.com/file/d/1ihLZe6huiOmfCcYu9X0hnbknFPJveQUi/view?usp=sharing"
   },
   {
     degree: "BTS Informatique SIO pour l'Industrie et les Services",
@@ -111,6 +113,20 @@ export default function Education() {
                         <School className="h-4 w-4" />
                         <span>{edu.institution}</span>
                       </div>
+                      
+                      {edu.programLink && (
+                        <div className="mt-2 pt-2">
+                          <Button 
+                            variant="outline" 
+                            size="sm"
+                            className="flex items-center gap-2"
+                            onClick={() => window.open(edu.programLink, '_blank')}
+                          >
+                            <ExternalLink className="h-3.5 w-3.5" />
+                            Voir le Programme
+                          </Button>
+                        </div>
+                      )}
                     </div>
                   </div>
                 ))}
