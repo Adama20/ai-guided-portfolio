@@ -13,7 +13,8 @@ import {
   Shield, 
   Zap,
   Code,
-  GraduationCap
+  GraduationCap,
+  Warehouse
 } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -34,6 +35,13 @@ export default function Projects() {
             </p>
             
             <div ref={ref} className={`grid md:grid-cols-2 gap-8 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+              <ProjectCard
+                title="Mise en place d'un Data Warehouse BigQuery avec GCP pour le Suivi des Étudiants de l'école AmaissaTech"
+                description="Ce projet met en avant la méthode d'ingénierie et d'analyse de données en créant un entrepôt de données sur Google Cloud Platform avec une modélisation en étoile. Ensuite connecté cet entrepôt à Power BI en mode DirectQuery pour réaliser des analyses avancées avec DAX, M, SQL et Python."
+                icon={Warehouse}
+                tags={["Google Cloud Platform", "BigQuery", "Power BI", "DirectQuery", "DAX", "Langage M", "SQL", "Python", "Modélisation en étoile", "Analyse de données"]}
+              />
+              
               <ProjectCard
                 title="Météo Campus - Application web et mobile de prédiction météorologique (IA)"
                 description="Développement d'une solution complète de prédiction météorologique pour campus universitaires offrant des prévisions localisées et alertes en temps réel. Utilisation d'algorithmes d'IA pour fournir des prévisions précises sur web et mobile."
