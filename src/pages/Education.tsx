@@ -26,7 +26,8 @@ const educations = [
     institution: "Université de Perpignan",
     period: "2020-2021",
     location: "Perpignan, France",
-    programLink: "https://drive.google.com/file/d/1ihLZe6huiOmfCcYu9X0hnbknFPJveQUi/view?usp=sharing"
+    programLink: "https://drive.google.com/file/d/1ihLZe6huiOmfCcYu9X0hnbknFPJveQUi/view?usp=sharing",
+    careerLink: "https://formations.univ-perp.fr/diplome/licences-professionnelles/licence-pro-metiers-de-linformatique-administration-et-securite-des-systemes-et-des-reseaux#etapres"
   },
   {
     degree: "BTS Informatique SIO pour l'Industrie et les Services",
