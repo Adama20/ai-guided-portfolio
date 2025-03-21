@@ -1,4 +1,3 @@
-
 import PortfolioNavbar from '@/components/PortfolioNavbar';
 import Footer from '@/components/Footer';
 import { useRevealAnimation } from '@/lib/animations';
@@ -33,7 +32,8 @@ const educations = [
     degree: "BTS Informatique SIO pour l'Industrie et les Services",
     institution: "Ecole Sénégal Japon",
     period: "2016-2018",
-    location: "Dakar, Sénégal"
+    location: "Dakar, Sénégal",
+    programLink: "https://cfptsj.sn/service/informatique/"
   }
 ];
 
