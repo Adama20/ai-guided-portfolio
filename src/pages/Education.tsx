@@ -8,31 +8,25 @@ import { Button } from '@/components/ui/button';
 
 const educations = [
   {
-    degree: "Master (Bac+5) Informatique parcours MIAGE - Informatique Décisionnelle",
+    degree: "Master Informatique parcours MIAGE - Systèmes d'Information - Big Data",
     institution: "Université de Bordeaux",
-    period: "2022-2024",
+    period: "2021-2023",
     location: "Bordeaux, France",
     programLink: "https://miage.emi.u-bordeaux.fr/",
     careerLink: "https://www.miage.fr/master-miage-sciences-numeriques-management-2/#"
   },
   {
-    degree: "Licence (Bac+3) Informatique parcours MIAGE - Informatique Décisionnelle",
-    institution: "Université de Bordeaux",
-    period: "2021-2022",
-    location: "Bordeaux, France"
-  },
-  {
-    degree: "Licence Professionnelle Informatique parcours Administrateur de Systèmes et de Bases de Données",
-    institution: "Université de Perpignan",
+    degree: "Licence Professionnelle Informatique - Admisys et Base de Données",
+    institution: "IUT/Université de Perpignan",
     period: "2020-2021",
     location: "Perpignan, France",
     programLink: "https://drive.google.com/file/d/1ihLZe6huiOmfCcYu9X0hnbknFPJveQUi/view?usp=sharing",
     careerLink: "https://formations.univ-perp.fr/diplome/licences-professionnelles/licence-pro-metiers-de-linformatique-administration-et-securite-des-systemes-et-des-reseaux#etapres"
   },
   {
-    degree: "BTS Informatique SIO pour l'Industrie et les Services",
-    institution: "Ecole Sénégal Japon",
-    period: "2016-2018",
+    degree: "BTS Informatique SIO - Informatique",
+    institution: "Ecole CFPT",
+    period: "2018-2020",
     location: "Dakar, Sénégal",
     programLink: "https://cfptsj.sn/service/informatique/"
   }
@@ -40,29 +34,19 @@ const educations = [
 
 const certifications = [
   {
-    title: "L'essentiel de Power BI",
-    issuer: "LinkedIn Learning",
-    date: "2023"
+    title: "Dataiku Advanced Designer",
+    issuer: "Dataiku",
+    date: "Mai 2025"
   },
   {
-    title: "L'essentiel de Power BI service",
-    issuer: "LinkedIn Learning",
-    date: "2023"
+    title: "Dataiku Core Designer",
+    issuer: "Dataiku",
+    date: "Mai 2025"
   },
   {
-    title: "Modéliser les données avec DAX",
-    issuer: "LinkedIn Learning",
-    date: "2023"
-  },
-  {
-    title: "Les fondements de Microsoft Fabric",
-    issuer: "LinkedIn Learning",
-    date: "2024"
-  },
-  {
-    title: "Les Fondements de Microsoft Azure",
-    issuer: "LinkedIn Learning",
-    date: "2023"
+    title: "Microsoft Power BI",
+    issuer: "Microsoft",
+    date: "Avril 2023"
   }
 ];
 

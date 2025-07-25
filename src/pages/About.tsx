@@ -107,7 +107,7 @@ export default function About() {
                   <div className="glass rounded-2xl p-8 mb-8">
                     <h2 className="text-2xl font-bold mb-4">Qui suis-je ?</h2>
                     <p className="text-lg leading-relaxed mb-4">
-                      Ingénieur en data et informatique décisionnelle (MIAGE Bac+5), passionné par la data et les défis technologiques, je mets mon expertise en ingénierie des données et en BI au service de projets innovants, alliant analyse, synthèse et esprit d'équipe pour transformer les données en leviers de performance.
+                      Passionné par la data et les défis technologiques avec 4 ans d'expérience, je mets mon expertise en ingénierie des données et en analyse de données au service de projets innovants, alliant analyse, synthèse et esprit d'équipe pour transformer les données en leviers de performance.
                     </p>
                     <p className="text-lg leading-relaxed">
                       J'aime apprendre de nouvelles technologies et relever de nouveaux défis. Mon parcours m'a permis d'acquérir une solide expérience dans les domaines de la Business Intelligence, de l'analyse de données et du développement de solutions décisionnelles.
@@ -117,9 +117,7 @@ export default function About() {
                   <div className="glass rounded-2xl p-8 mb-8">
                     <h2 className="text-2xl font-bold mb-4">Centres d'intérêt</h2>
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                      <InterestItem title="Football" emoji="⚽" />
-                      <InterestItem title="Course à pied" emoji="🏃‍♂️" />
-                      <InterestItem title="Vélo" emoji="🚴‍♂️" />
+                      <InterestItem title="Sport" emoji="⚽" />
                       <InterestItem title="Voyage" emoji="✈️" />
                       <InterestItem title="Photographie" emoji="📷" />
                       <InterestItem title="Design" emoji="🎨" />
@@ -131,9 +129,12 @@ export default function About() {
                     <div className="flex items-start gap-4">
                       <Heart className="h-8 w-8 text-primary shrink-0 mt-1" />
                       <div>
-                        <h3 className="text-xl font-semibold mb-2">AMEES éducatifs</h3>
+                        <h3 className="text-xl font-semibold mb-2">Bénévole Parrain & Chef de projet évènementiel</h3>
+                        <p className="text-muted-foreground mb-2">
+                          <strong>Université de Bordeaux (2021-2023) :</strong> Suivi régulier des progrès et des besoins des jeunes parrainés.
+                        </p>
                         <p className="text-muted-foreground">
-                          Je suis impliqué dans l'association AMEES qui œuvre dans le domaine éducatif pour favoriser l'accès à l'éducation et au développement des compétences numériques.
+                          <strong>AMEES Educative (2021-2023) :</strong> Chef de projet évènementiel pour favoriser l'accès à l'éducation et au développement des compétences numériques.
                         </p>
                       </div>
                     </div>

@@ -6,71 +6,66 @@ import { Database, Code, Server, BarChart3, Lightbulb, Workflow, PieChart, Globe
 
 const skillCategories = [
   {
-    name: "Data & BI",
+    name: "Data & Intelligence Artificielle",
     icon: BarChart3,
     skills: [
+      { name: "Dataiku", level: 85 },
       { name: "Power BI", level: 90 },
-      { name: "SQL Server", level: 85 },
-      { name: "PostgreSQL", level: 80 },
-      { name: "MySQL", level: 85 },
-      { name: "Oracle", level: 75 },
-      { name: "ETL (Power Query)", level: 85 },
-      { name: "Data Modeling", level: 80 },
+      { name: "Looker Studio", level: 75 },
+      { name: "Talend", level: 70 },
+      { name: "Data Modeling", level: 85 },
       { name: "DAX", level: 85 },
-      { name: "M Language", level: 80 },
+      { name: "Power Query", level: 85 },
     ]
   },
   {
-    name: "Programmation",
+    name: "Infrastructure & Bases de données",
+    icon: Database,
+    skills: [
+      { name: "MySQL", level: 85 },
+      { name: "Oracle", level: 75 },
+      { name: "PostgreSQL", level: 80 },
+      { name: "GCP", level: 75 },
+      { name: "Azure", level: 80 },
+    ]
+  },
+  {
+    name: "Langages de développement",
     icon: Code,
     skills: [
       { name: "Python", level: 85 },
-      { name: "PL/SQL", level: 80 },
-      { name: "T-SQL", level: 80 },
+      { name: "API", level: 75 },
+      { name: "SQL", level: 90 },
       { name: "R", level: 70 },
       { name: "Java", level: 65 },
-      { name: "HTML/CSS", level: 75 },
-      { name: "JavaScript", level: 70 },
       { name: "VBA", level: 65 },
+      { name: "HTML/JS", level: 75 },
     ]
   },
   {
-    name: "Intelligence Artificielle",
-    icon: Lightbulb,
-    skills: [
-      { name: "Régression", level: 75 },
-      { name: "Clustering", level: 70 },
-      { name: "Classification", level: 70 },
-      { name: "CNN", level: 65 },
-    ]
-  },
-  {
-    name: "Systèmes & Réseaux",
+    name: "Systèmes & Logiciels",
     icon: Server,
     skills: [
+      { name: "Linux/Unix", level: 75 },
+      { name: "CRM Dynamics 365", level: 70 },
       { name: "Windows", level: 85 },
-      { name: "Linux", level: 75 },
-      { name: "TCP/IP", level: 70 },
-      { name: "Scripting (Bash, PowerShell)", level: 75 },
     ]
   },
   {
-    name: "Cloud & Services",
-    icon: Globe,
-    skills: [
-      { name: "Microsoft Azure", level: 75 },
-      { name: "Microsoft Fabric", level: 70 },
-      { name: "Google Cloud Platform", level: 50 },
-      { name: "SharePoint", level: 80 },
-      { name: "Power Automate", level: 85 },
-    ]
-  },
-  {
-    name: "Méthodologie & Gestion",
+    name: "Gestion de Projet",
     icon: Workflow,
     skills: [
-      { name: "Méthode Agile", level: 80 },
+      { name: "Scrum", level: 80 },
       { name: "Trello", level: 85 },
+      { name: "JIRA", level: 75 },
+    ]
+  },
+  {
+    name: "Design UX/UI & Version Control",
+    icon: PieChart,
+    skills: [
+      { name: "Figma", level: 70 },
+      { name: "Google Slides", level: 80 },
       { name: "Git", level: 75 },
     ]
   },

@@ -8,124 +8,143 @@ import { Button } from '@/components/ui/button';
 
 const experiences = [
   {
-    title: "Ingénieur Informatique Décisionnelle(BI) / Consultant Data",
+    title: "Consultant Data Ingénieur | Data Analyst",
+    company: "Indépendant",
+    period: "Depuis janvier 2025",
+    type: "Freelance",
+    location: "Bordeaux",
+    realizations: [
+      {
+        title: "Audit des SI pour évaluer la maturité data et recommander des solutions",
+        details: [
+          "Évaluation de l'architecture data existante et identification des axes d'amélioration",
+          "Recommandation de solutions adaptées aux besoins métiers et contraintes techniques"
+        ]
+      },
+      {
+        title: "Conception de Data Warehouse et modélisation décisionnelle",
+        details: [
+          "Conception d'architectures de données scalables et performantes",
+          "Modélisation dimensionnelle pour l'aide à la décision"
+        ]
+      },
+      {
+        title: "Déploiement de pipelines de données et création de tableaux de bord",
+        details: [
+          "Automatisation des flux de données avec des outils ETL/ELT",
+          "Développement de dashboards interactifs pour le pilotage métier"
+        ]
+      },
+      {
+        title: "Accompagnement à la transformation numérique",
+        details: [
+          "Support technique et formation aux outils analytiques",
+          "Accompagnement des équipes dans l'adoption de nouvelles technologies"
+        ]
+      }
+    ],
+    tools: ["Python", "SQL", "Power BI", "Azure", "GCP", "Dataiku", "Talend", "Git"]
+  },
+  {
+    title: "Analytics & Data Engineer",
     company: "SNCF VOYAGEURS",
-    period: "Mai 2023 - Octobre 2024",
+    period: "Mai 2023 - Décembre 2024",
     type: "Alternance",
     location: "Bordeaux",
     realizations: [
       {
-        title: "Analyse des besoins et conception de solutions BI",
+        title: "Analyse, structuration, et formalisation des besoins métiers",
         details: [
-          "Analyser, structurer et formaliser les besoins métiers en collaboration avec les responsables du pôle QSE pour concevoir des solutions adaptées."
+          "Analyser et structurer les besoins métiers en collaboration avec les équipes QSE",
+          "Formaliser les spécifications techniques pour la conception de solutions adaptées"
         ]
       },
       {
-        title: "Collecte, transformation et fiabilisation des données",
+        title: "Extraction et traitement de données avec SQL",
         details: [
-          "Collecter, traiter et transformer les données issues de diverses sources (SharePoint, Entrepôt de données, Application, SQL Server) afin de garantir leur qualité et leur cohérence.",
-          "Centraliser et fiabiliser les données en améliorant la gouvernance et l'accessibilité des informations critiques."
+          "Développement de requêtes SQL complexes pour l'extraction de données",
+          "Optimisation des performances des requêtes sur de gros volumes de données"
         ]
       },
       {
-        title: "Projets : Développement et optimisation des outils analytiques",
+        title: "Analyse et préparation des données avec Azure et Dataiku",
         details: [
-          "Développer et perfectionner des tableaux de bord dans Power BI pour analyser la performance, la sécurité et l'impact environnemental à travers des KPIs et des modèles analytiques avancés.",
-          "Refonte et optimisation des tableaux de bord pour la revue de sécurité, les formations électriques.",
-          "Développeur des tableaux de bordeaux pour l'analyse environnementale et les initiatives d'écomobilité.",
-          "Développement de solutions BI pour améliorer le suivi des actions stratégiques et opérationnelles du pôle QSE."
+          "Profiling et mapping des données pour garantir leur qualité",
+          "Gestion des métadonnées et création de jeux de données structurés",
+          "Développement de pipelines de données automatisés"
         ]
       },
       {
-        title: "Optimisation des performances et automatisation",
+        title: "Modélisation de Data Warehouse",
         details: [
-          "Migrer, intégrer et optimiser les données dans Power BI en appliquant des bonnes pratiques de modélisation (modèle en étoile, flocon, relationnel, DAX).",
-          "Automatiser et fiabiliser les processus de reporting grâce à Power Automate et Power Query pour améliorer l'efficacité et réduire les erreurs humaines."
+          "Conception de schémas en étoile et flocon pour l'optimisation des performances",
+          "Application des principes de normalisation et dénormalisation",
+          "Mise en place d'architectures décisionnelles scalables"
         ]
       },
       {
-        title: "Participation à des projets transverses",
+        title: "Automatisation de processus avec Power BI Service et Python",
         details: [
-          "Participation au développement d'une application Power Apps pour la gestion des précurseurs d'accidents et la prévention des risques.",
-          "Mise en place d'indicateurs de performance et de suivi pour optimiser la gestion de la sécurité, de l'environnement et des formations internes."
+          "Développement de scripts Python pour l'automatisation des tâches",
+          "Mise en place de notifications et rafraîchissements automatiques",
+          "Création de scénarios métiers automatisés"
         ]
       },
       {
-        title: "Déploiement, formation et accompagnement des utilisateurs",
+        title: "Création de tableaux de bord avec Power BI",
         details: [
-          "Tester, déployer et maintenir les outils analytiques afin d'assurer leur bon fonctionnement et leur évolution en fonction des besoins.",
-          "Former et assister les collaborateurs à l'utilisation des outils métiers pour améliorer leur autonomie et optimiser l'exploitation des données."
+          "Développement de dashboards interactifs utilisant Python, DAX et SQL",
+          "Création de KPIs et indicateurs métiers avancés",
+          "Optimisation des performances des rapports"
         ]
       }
     ],
-    tools: ["Power BI", "Azure", "Python", "SQL", "M", "DAX", "SharePoint", "Power Automate", "PL/SQL", "SQL Server", "Power Query", "Trello", "Excel"]
+    tools: ["Power BI", "Azure", "Dataiku", "Python", "SQL", "DAX", "Power Query", "Power Automate", "Trello"]
   },
   {
-    title: "Développeur Web",
-    company: "SEOS-FRANCE",
-    period: "Avril 2022 - Juin 2022",
-    type: "Stage",
-    location: "Toulouse",
-    website: "https://seos-france.org/",
-    realizations: [
-      {
-        title: "Développement et Optimisation du Site Web de l'Organisation",
-        details: [
-          "Participer au développement de sites web.",
-          "Intégrer et personnaliser le chatbot conversationnel pour offrir une assistance immédiate aux utilisateurs.",
-          "Administrer et gérer les serveurs et les bases de données.",
-          "Implémenter des interfaces modernes et réactives, optimisées pour une expérience fluide.",
-          "Collaborer avec l'équipe interne pour gérer le projet, définir les priorités, et respecter les délais."
-        ]
-      }
-    ],
-    tools: ["JavaScript", "Visual Studio", "MySQL", "IONOS", "Bootstrap", "FileZilla", "HTML5", "CSS3"]
-  },
-  {
-    title: "Consultant Support Technique Systèmes et Données",
-    company: "SEWACARD INDUSTRIE",
-    period: "Mai 2018 - Août 2020",
+    title: "Data Analyst",
+    company: "Sewacard - Banque & Monétique",
+    period: "Janvier 2021 - Avril 2023",
     type: "CDD",
-    location: "Dakar",
+    location: "Bordeaux",
     realizations: [
       {
-        title: "Installation et configuration des systèmes",
+        title: "Développement de tableaux de bord Power BI",
         details: [
-          "Installer et configurer des matériels, logiciels et systèmes pour garantir leur bon fonctionnement au sein de l'entreprise."
+          "Création de dashboards pour l'analyse des performances opérationnelles",
+          "Développement d'indicateurs de suivi de la production industrielle"
         ]
       },
       {
-        title: "Déploiement des postes de travail",
+        title: "Modélisation des données",
         details: [
-          "Déployer les postes de travail sous Linux et Windows, intégrer les outils de gestion des données pour assurer la productivité des utilisateurs."
+          "Modélisation des données issues de PostgreSQL et SharePoint",
+          "Nettoyage, transformation et intégration dans Power BI via Power Query et DAX"
         ]
       },
       {
-        title: "Gestion des bases de données et serveurs",
+        title: "Automatisation des processus de reporting",
         details: [
-          "Administrer les bases de données et les serveurs applicatifs, en veillant à leur performance et à leur sécurité."
+          "Automatisation des mises à jour des jeux de données avec Power BI Service",
+          "Optimisation des processus de reporting pour réduire les tâches manuelles"
         ]
       },
       {
-        title: "Gestion de l'activité de support",
+        title: "Support IT pour les environnements analytiques",
         details: [
-          "Piloter l'activité de support technique à travers l'outil de ticketing ServiceNow en assurant un suivi efficace des demandes des utilisateurs."
+          "Déploiement des environnements analytiques",
+          "Optimisation des connexions Azure et PostgreSQL"
         ]
       },
       {
-        title: "Assistance et formation des utilisateurs",
+        title: "Formation et accompagnement des utilisateurs",
         details: [
-          "Assister et ancien des utilisateurs (technique, fonctionnel)"
-        ]
-      },
-      {
-        title: "Rédaction de documents",
-        details: [
-          "Rédiger les documents techniques et fonctionnels pour faciliter la gestion et la compréhension des systèmes en place."
+          "Formation des équipes sur les outils de dataViz",
+          "Accompagnement dans l'adoption des nouveaux processus analytiques"
         ]
       }
     ],
-    tools: ["Linux", "Windows", "ServiceNow", "SGBD"]
+    tools: ["Power BI", "PostgreSQL", "SharePoint", "Power Query", "DAX", "Azure", "Power BI Service"]
   }
 ];
 
