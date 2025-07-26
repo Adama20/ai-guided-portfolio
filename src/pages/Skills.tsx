@@ -6,7 +6,7 @@ import { Database, Code, Server, BarChart3, Lightbulb, Workflow, PieChart, Globe
 
 const skillCategories = [
   {
-    name: "Data & Intelligence Artificielle",
+    name: "DATA",
     icon: BarChart3,
     skills: [
       { name: "Dataiku", level: 85 },
@@ -19,7 +19,7 @@ const skillCategories = [
     ]
   },
   {
-    name: "Infrastructure & Bases de données",
+    name: "Infrastructures de données",
     icon: Database,
     skills: [
       { name: "MySQL", level: 85 },
@@ -43,7 +43,7 @@ const skillCategories = [
     ]
   },
   {
-    name: "Systèmes & Logiciels",
+    name: "Systèmes d'exploitation",
     icon: Server,
     skills: [
       { name: "Linux/Unix", level: 75 },

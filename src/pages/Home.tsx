@@ -9,7 +9,7 @@ import { useTypewriter, useParallax } from '@/lib/animations';
 
 export default function Home() {
   const { displayText: title } = useTypewriter("Adama LO", 80, 0);
-  const { displayText: subtitle } = useTypewriter("Consultant Data | Ingénieur BI", 50, 1000);
+  const { displayText: subtitle } = useTypewriter("Consultant Data & Analytics Engineer", 50, 1000);
   const { displayText: description } = useTypewriter("Transformer les données en performance", 30, 2000);
   
   const parallaxBg = useParallax(0.05);

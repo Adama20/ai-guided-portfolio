@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 
 const experiences = [
   {
-    title: "Consultant Data Ingénieur | Data Analyst",
+    title: "Consultant Data & Analytics Engineer",
     company: "Indépendant",
     period: "Depuis janvier 2025",
     type: "Freelance",
@@ -67,7 +67,7 @@ const experiences = [
         ]
       },
       {
-        title: "Analyse et préparation des données avec Azure et Dataiku",
+        title: "Analyse et préparation des données avec Azure",
         details: [
           "Profiling et mapping des données pour garantir leur qualité",
           "Gestion des métadonnées et création de jeux de données structurés",
@@ -99,12 +99,12 @@ const experiences = [
         ]
       }
     ],
-    tools: ["Power BI", "Azure", "Dataiku", "Python", "SQL", "DAX", "Power Query", "Power Automate", "Trello"]
+    tools: ["Power BI", "Azure", "Python", "SQL", "DAX", "Power Query", "Power Automate", "Trello"]
   },
   {
     title: "Data Analyst",
     company: "Sewacard - Banque & Monétique",
-    period: "Janvier 2021 - Avril 2023",
+    period: "Septembre 2021 - Avril 2023",
     type: "CDD",
     location: "Bordeaux",
     realizations: [
