@@ -111,7 +111,7 @@ export default function About() {
                       Passionné par la data et les défis technologiques avec 4 ans d'expérience, je mets mon expertise en ingénierie des données et en analyse de données au service de projets innovants, alliant analyse, synthèse et esprit d'équipe pour transformer les données en leviers de performance.
                     </p>
                      <p className="text-lg leading-relaxed">
-                       Mon parcours m'a permis d'acquérir une solide expertise dans les domaines de la Business Intelligence, de l'analyse de données et du développement de solutions décisionnelles. Je maîtrise les outils comme Power BI, Dataiku, SQL, Python et les environnements cloud Azure et GCP.
+                       Doté d'atouts clés comme l'adaptation, l'autonomie, le travail en équipe et la force de proposition, je me spécialise dans l'audit des SI, la conception de Data Warehouse, le déploiement de pipelines de données et la création de tableaux de bord. Mon expertise couvre Power BI, Dataiku, SQL, Python et les plateformes cloud Azure et GCP.
                      </p>
                   </div>
                   
