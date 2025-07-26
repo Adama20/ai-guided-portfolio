@@ -106,7 +106,7 @@ export default function Home() {
                 icon={Award} 
                 title="Certifications" 
                 value="5+"
-                description="Power BI, Azure, Microsoft Fabric"
+                description="Dataiku, Power BI"
                 link="/education#certifications"
               />
             </div>

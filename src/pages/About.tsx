@@ -74,7 +74,7 @@ export default function About() {
                         <Languages className="h-5 w-5 text-primary mt-0.5" />
                         <div>
                           <h3 className="font-medium">Langues</h3>
-                          <p className="text-muted-foreground">Français (Courant), Anglais (B1)</p>
+                          <p className="text-muted-foreground">Français (Langue Maternelle), Anglais (B1)</p>
                         </div>
                       </li>
                       <li className="flex items-start gap-3">

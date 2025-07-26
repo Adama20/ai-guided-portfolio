@@ -164,9 +164,9 @@ export default function Index() {
               <div className="text-center mb-12">
                 <Badge className="mb-3 px-3 py-1 rounded-full">À propos</Badge>
                 <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Qui suis-je ?</h2>
-                <p className="text-muted-foreground max-w-2xl mx-auto">
-                  Développeur web passionné par la création d'expériences numériques innovantes et esthétiques, guidées par l'intelligence artificielle.
-                </p>
+                 <p className="text-muted-foreground max-w-2xl mx-auto">
+                   Passionné par la data et les défis technologiques avec 4 ans d'expérience, je mets mon expertise en ingénierie des données et en analyse de données au service de projets innovants.
+                 </p>
               </div>
             </div>
             
@@ -179,20 +179,20 @@ export default function Index() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
                   <div className="text-white">
-                    <h3 className="text-xl font-bold">Jean Dupont</h3>
-                    <p className="text-white/80">Développeur Frontend & UX Designer</p>
+                     <h3 className="text-xl font-bold">Adama LO</h3>
+                     <p className="text-white/80">Consultant Data & Analytics Engineer</p>
                   </div>
                 </div>
               </div>
               
               <div className="space-y-6">
-                <p className="text-lg leading-relaxed">
-                  Je suis un développeur web avec 5 ans d'expérience, spécialisé dans la création d'interfaces utilisateur modernes et intuitives. J'ai une passion pour l'innovation et l'intégration des nouvelles technologies comme l'intelligence artificielle dans mes projets.
-                </p>
-                
-                <p className="text-lg leading-relaxed">
-                  Ma philosophie de design est centrée sur l'utilisateur, avec une attention particulière portée aux détails et à l'accessibilité. Je crois que la technologie doit servir l'humain et non l'inverse.
-                </p>
+                 <p className="text-lg leading-relaxed">
+                   Passionné par la data et les défis technologiques avec 4 ans d'expérience, je mets mon expertise en ingénierie des données et en analyse de données au service de projets innovants, alliant analyse, synthèse et esprit d'équipe pour transformer les données en leviers de performance.
+                 </p>
+                 
+                 <p className="text-lg leading-relaxed">
+                   J'aime apprendre de nouvelles technologies et relever de nouveaux défis. Mon parcours m'a permis d'acquérir une solide expérience dans les domaines de la Business Intelligence, de l'analyse de données et du développement de solutions décisionnelles.
+                 </p>
                 
                 <div className="flex gap-4 pt-4">
                   <Button className="rounded-full">
