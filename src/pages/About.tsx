@@ -110,9 +110,9 @@ export default function About() {
                     <p className="text-lg leading-relaxed mb-4">
                       Passionné par la data et les défis technologiques avec 4 ans d'expérience, je mets mon expertise en ingénierie des données et en analyse de données au service de projets innovants, alliant analyse, synthèse et esprit d'équipe pour transformer les données en leviers de performance.
                     </p>
-                    <p className="text-lg leading-relaxed">
-                      J'aime apprendre de nouvelles technologies et relever de nouveaux défis. Mon parcours m'a permis d'acquérir une solide expérience dans les domaines de la Business Intelligence, de l'analyse de données et du développement de solutions décisionnelles.
-                    </p>
+                     <p className="text-lg leading-relaxed">
+                       Mon parcours m'a permis d'acquérir une solide expertise dans les domaines de la Business Intelligence, de l'analyse de données et du développement de solutions décisionnelles. Je maîtrise les outils comme Power BI, Dataiku, SQL, Python et les environnements cloud Azure et GCP.
+                     </p>
                   </div>
                   
                   <div className="glass rounded-2xl p-8 mb-8">

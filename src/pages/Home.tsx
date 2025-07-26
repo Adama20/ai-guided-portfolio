@@ -42,9 +42,9 @@ export default function Home() {
                   <h2 className="text-2xl md:text-3xl text-primary font-semibold mb-4">
                     {subtitle}
                   </h2>
-                  <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg">
-                    {description}. Ingénieur en data et informatique décisionnelle, je mets mon expertise au service de projets innovants pour créer de la valeur à partir des données.
-                  </p>
+                   <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg">
+                     {description}. Passionné par la data et les défis technologiques avec 4 ans d'expérience, je mets mon expertise en ingénierie des données et en analyse de données au service de projets innovants, alliant analyse, synthèse et esprit d'équipe.
+                   </p>
                   
                   <div className="flex flex-wrap gap-4">
                     <Button asChild className="rounded-full group">
